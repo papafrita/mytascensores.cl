@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" id="metaDescription" content="Detalle del servicio de transporte vertical en MYT Ascensores. Asistencia técnica certificada por el MINVU." />
+  <title id="pageTitle">Servicio Técnico | MYT Ascensores</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Brands Support -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            primary: '#1D3273',
+            'primary-light': '#2a4494',
+            'primary-dark': '#13214c',
+            secondary: '#2BC7D9',
+            'secondary-light': '#5ce0f0',
+            'secondary-dark': '#1ba7b7',
+            tertiary: '#72BF6F',
+            'tertiary-light': '#91d48e',
+            'tertiary-dark': '#56a353',
+            
+            navy: '#1D3273',
+            'navy-light': '#2a4494',
+            'navy-dark': '#13214c',
+            ink: '#121e42',
+            cyan: '#2BC7D9',
+            'cyan-light': '#5ce0f0',
+            'cyan-dark': '#1ba7b7',
+            purple: '#72BF6F',
+            'purple-light': '#91d48e',
+            'purple-dark': '#56a353',
+            
+            surface: '#f3f6fa',
+            'surface-card': '#ffffff',
+            'surface-muted': '#f8fafc',
+          },
+          boxShadow: {
+            premium: '0 20px 50px rgba(29, 50, 115, 0.08)',
+            premiumGlow: '0 0 0 4px rgba(43, 199, 217, 0.15), 0 20px 40px rgba(43, 199, 217, 0.12)',
+            cardHover: '0 30px 60px rgba(29, 50, 115, 0.12)',
+          }
+        }
+      }
+    };
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .glass-nav {
+      background: rgba(243, 246, 250, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .glass-nav-scrolled {
+      background: rgba(243, 246, 250, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    
+    /* Solid Brand Color Utility Overrides */
+    .bg-primary { background-color: #1D3273 !important; }
+    .bg-primary-dark { background-color: #13214c !important; }
+    .text-primary { color: #1D3273 !important; }
+    .border-primary { border-color: #1D3273 !important; }
+    
+    .bg-navy { background-color: #1D3273 !important; }
+    .text-navy { color: #1D3273 !important; }
+    .border-navy { border-color: #1D3273 !important; }
+
+    .bg-secondary { background-color: #2BC7D9 !important; }
+    .text-secondary { color: #2BC7D9 !important; }
+    .border-secondary { border-color: #2BC7D9 !important; }
+
+    .bg-cyan { background-color: #2BC7D9 !important; }
+    .text-cyan { color: #2BC7D9 !important; }
+    .border-cyan { border-color: #2BC7D9 !important; }
+
+    .bg-tertiary { background-color: #72BF6F !important; }
+    .text-tertiary { color: #72BF6F !important; }
+    .border-tertiary { border-color: #72BF6F !important; }
+
+    .bg-purple { background-color: #72BF6F !important; }
+    .text-purple { color: #72BF6F !important; }
+    .border-purple { border-color: #72BF6F !important; }
+
+    /* Content Fade-in Transitions for Premium Feel */
+    .fade-in {
+      animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-surface text-ink font-sans antialiased overflow-x-hidden">
+
+  <!-- TOP INFO BAR -->
+  <div class="bg-primary text-white border-b border-white/5 relative z-50">
+    <div class="mx-auto flex max-w-7xl flex-col sm:flex-row items-center justify-between gap-3 px-6 py-4 text-xs md:text-sm lg:px-8">
+      <div class="flex flex-wrap justify-center sm:justify-start items-center gap-x-7 gap-y-2">
+        <a class="inline-flex items-center gap-2 hover:text-secondary transition-colors" href="tel:+56967579214">
+          <strong class="text-white font-bold">Ventas:</strong>
+          <i data-lucide="phone" class="h-4 w-4 text-secondary"></i>
+          <span class="font-semibold">+56 9 6757 9214</span>
+        </a>
+        <a class="inline-flex items-center gap-2 hover:text-secondary transition-colors" href="tel:+56931831327">
+          <strong class="text-white font-bold">Emergencias:</strong>
+          <i data-lucide="phone" class="h-4 w-4 text-red-400 animate-pulse"></i>
+          <span class="font-semibold">+56 9 3183 1327</span>
+        </a>
+        <span class="inline-flex items-center gap-2 text-white/90">
+          <i data-lucide="map-pin" class="h-4 w-4 text-secondary"></i>
+          Román Díaz # 928, Providencia
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3">
+          <a aria-label="Facebook" class="text-white/60 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="index.html"><i class="fa-brands fa-facebook text-lg"></i></a>
+          <a aria-label="Instagram" class="text-white/60 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.instagram.com/mytascensores/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a aria-label="YouTube" class="text-white/60 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.youtube.com/@mytascensores-zl2pt" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube text-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER & NAVBAR -->
+  <header id="mainHeader" class="sticky top-0 z-40 transition-all duration-300 glass-nav">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
+      <a href="index.html#inicio" class="flex items-center gap-3 group">
+        <img id="headerLogo" src="LOGO MYT NUEVO.png" alt="MYT Ascensores" class="h-20 w-auto md:h-28 lg:h-32 object-contain transition-all duration-300" />
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 lg:gap-10">
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="index.html#inicio">Inicio</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="index.html#servicios">Servicios</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="index.html#proceso">Proceso</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="index.html#preguntas">Preguntas Frecuentes</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="index.html#contacto">Contacto</a>
+        
+        <!-- CTA Link -->
+        <a id="ctaButton" class="inline-flex items-center gap-2 rounded-lg bg-cyan border border-cyan px-5 py-3 font-semibold text-white hover:bg-cyan-dark hover:border-cyan-dark shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all text-sm" href="#cotizar">
+          Solicitar cotización 
+          <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="menuToggle" class="rounded-xl border border-slate-200 p-2.5 text-slate-700 md:hidden hover:bg-slate-50 transition-colors" aria-label="Abrir menú">
+        <i data-lucide="menu" id="menuIcon" class="h-6 w-6 transition-transform duration-300"></i>
+      </button>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobileMenu" class="hidden absolute left-6 right-6 top-24 rounded-2xl bg-white p-6 shadow-premium border border-slate-100 flex flex-col gap-4 md:hidden">
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="index.html#inicio">Inicio</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="index.html#servicios">Servicios</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="index.html#proceso">Proceso</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="index.html#preguntas">Preguntas Frecuentes</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="index.html#contacto">Contacto</a>
+        <hr class="border-slate-100 my-2" />
+        <a class="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan border border-cyan py-4 font-bold text-white shadow-sm hover:bg-cyan-dark hover:border-cyan-dark transition-all" href="#cotizar">
+          Solicitar Cotización 
+          <i data-lucide="arrow-up-right" class="h-4.5 w-4.5"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO BANNER SECTION -->
+  <section class="relative bg-primary-dark text-white py-16 md:py-20 overflow-hidden">
+    <!-- Background Subtle Gradients -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('myt-design/base_images/hero-bg.png');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary/95 to-secondary/35"></div>
+    <div class="absolute -right-20 -top-20 w-80 h-80 bg-cyan/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs md:text-sm text-white/70 mb-4 font-medium" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-cyan transition-colors">Inicio</a>
+        <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-white/40"></i>
+        <a href="index.html#servicios" class="hover:text-cyan transition-colors">Servicios</a>
+        <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-white/40"></i>
+        <span class="text-cyan font-semibold" id="breadcrumbCurrent">Detalle</span>
+      </nav>
+
+      <!-- Banner Content -->
+      <div class="max-w-4xl">
+        <span id="heroTag" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-secondary/10 border border-secondary/20 text-secondary mb-4">
+          Servicios Especializados
+        </span>
+        <h1 id="heroTitle" class="text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-[1.05] tracking-tight">
+          Cargando Servicio...
+        </h1>
+        <p id="heroSubtitle" class="mt-4 text-base md:text-lg lg:text-xl text-white/80 font-light leading-relaxed max-w-3xl">
+          Ficha técnica detallada del servicio de transporte vertical en MYT Ascensores.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTAINER (2 COLUMNS) -->
+  <main class="mx-auto max-w-7xl px-6 py-12 md:py-20 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+      
+      <!-- LEFT COLUMN: Ficha Técnica (65% width) -->
+      <div class="lg:col-span-8 fade-in" id="mainContentContainer">
+        
+        <!-- Large Featured Image -->
+        <div class="relative rounded-2xl overflow-hidden shadow-premium border border-slate-100/80 mb-10 group max-h-[460px]">
+          <img id="featuredImage" src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM.jpeg" alt="Ficha del Servicio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
+        </div>
+
+        <!-- Dynamic Overview Section -->
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-premium border border-slate-100/50 mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold font-display text-navy flex items-center gap-3">
+            <span class="h-8 w-1 bg-cyan rounded-full"></span> Descripción del Servicio
+          </h2>
+          <p id="overviewText" class="mt-5 text-slate-600 leading-relaxed text-base md:text-lg font-normal">
+            Cargando descripción...
+          </p>
+        </div>
+
+        <!-- Key Features/Benefits Section -->
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-premium border border-slate-100/50 mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold font-display text-navy flex items-center gap-3">
+            <span class="h-8 w-1 bg-cyan rounded-full"></span> Beneficios y Características Clave
+          </h2>
+          <p class="mt-2 text-sm text-slate-400 font-medium">Nuestros estándares y valor agregado en la ejecución:</p>
+          <ul id="featuresList" class="mt-6 space-y-4">
+            <!-- Populated Dynamically -->
+          </ul>
+        </div>
+
+        <!-- Service Steps / Metodología -->
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-premium border border-slate-100/50">
+          <h2 class="text-2xl md:text-3xl font-extrabold font-display text-navy flex items-center gap-3 mb-8">
+            <span class="h-8 w-1 bg-cyan rounded-full"></span> Nuestro Plan de Trabajo
+          </h2>
+          <div id="stepsContainer" class="space-y-6 relative before:absolute before:left-6 before:top-4 before:bottom-4 before:w-0.5 before:bg-slate-100">
+            <!-- Populated Dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: Sidebar (35% width) -->
+      <aside class="lg:col-span-4 space-y-8">
+        
+        <!-- Navigation Card: Otros Servicios -->
+        <div class="bg-white rounded-3xl p-6 shadow-premium border border-slate-100/50">
+          <h3 class="text-lg font-bold font-display text-navy border-b border-slate-100 pb-4 flex items-center gap-2">
+            <i data-lucide="layout-grid" class="h-5 w-5 text-cyan"></i> Nuestros Servicios
+          </h3>
+          <div class="mt-4 space-y-2">
+            
+            <button onclick="switchService('mantenimiento')" id="side-tab-mantenimiento" class="w-full text-left p-3.5 rounded-xl border border-slate-100 bg-white transition-all duration-300 group flex items-center justify-between min-h-[64px]">
+              <div class="flex items-center gap-3">
+                <span class="side-icon-box rounded-lg p-2 flex items-center justify-center transition-all bg-secondary/10 text-secondary-dark group-hover:scale-105">
+                  <i data-lucide="clipboard-check" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h4 class="font-bold text-xs sm:text-sm text-navy leading-tight transition-colors">Mantenimiento Multimarca</h4>
+                </div>
+              </div>
+              <i data-lucide="chevron-right" class="h-4 w-4 text-slate-300 group-hover:text-cyan transition-colors"></i>
+            </button>
+
+            <button onclick="switchService('reparacion')" id="side-tab-reparacion" class="w-full text-left p-3.5 rounded-xl border border-slate-100 bg-white transition-all duration-300 group flex items-center justify-between min-h-[64px]">
+              <div class="flex items-center gap-3">
+                <span class="side-icon-box rounded-lg p-2 flex items-center justify-center transition-all bg-secondary/10 text-secondary-dark group-hover:scale-105">
+                  <i data-lucide="cog" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h4 class="font-bold text-xs sm:text-sm text-navy leading-tight transition-colors">Reparación y Normalización</h4>
+                </div>
+              </div>
+              <i data-lucide="chevron-right" class="h-4 w-4 text-slate-300 group-hover:text-cyan transition-colors"></i>
+            </button>
+
+            <button onclick="switchService('importacion')" id="side-tab-importacion" class="w-full text-left p-3.5 rounded-xl border border-slate-100 bg-white transition-all duration-300 group flex items-center justify-between min-h-[64px]">
+              <div class="flex items-center gap-3">
+                <span class="side-icon-box rounded-lg p-2 flex items-center justify-center transition-all bg-secondary/10 text-secondary-dark group-hover:scale-105">
+                  <i data-lucide="download" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h4 class="font-bold text-xs sm:text-sm text-navy leading-tight transition-colors">Importación e Instalación</h4>
+                </div>
+              </div>
+              <i data-lucide="chevron-right" class="h-4 w-4 text-slate-300 group-hover:text-cyan transition-colors"></i>
+            </button>
+
+            <button onclick="switchService('correctivo')" id="side-tab-correctivo" class="w-full text-left p-3.5 rounded-xl border border-slate-100 bg-white transition-all duration-300 group flex items-center justify-between min-h-[64px]">
+              <div class="flex items-center gap-3">
+                <span class="side-icon-box rounded-lg p-2 flex items-center justify-center transition-all bg-secondary/10 text-secondary-dark group-hover:scale-105">
+                  <i data-lucide="clipboard-list" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h4 class="font-bold text-xs sm:text-sm text-navy leading-tight transition-colors">Mantenimiento Correctivo</h4>
+                </div>
+              </div>
+              <i data-lucide="chevron-right" class="h-4 w-4 text-slate-300 group-hover:text-cyan transition-colors"></i>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Quick Contacts widget -->
+        <div class="bg-primary rounded-3xl p-6 text-white shadow-premium border border-white/5 relative overflow-hidden group">
+          <div class="absolute -right-10 -top-10 w-28 h-28 bg-purple/10 rounded-full blur-2xl pointer-events-none"></div>
+          <h3 class="text-lg font-bold font-display flex items-center gap-2 border-b border-white/10 pb-4">
+            <i data-lucide="phone-call" class="h-5 w-5 text-secondary"></i> ¿Necesitas ayuda directa?
+          </h3>
+          <p class="mt-4 text-sm text-white/80 leading-relaxed font-light">
+            Nuestro equipo técnico e ingenieros están listos para responder tus dudas o asistir a emergencias.
+          </p>
+          <div class="mt-6 space-y-3">
+            <a href="tel:+56931831327" class="flex items-center gap-3 rounded-xl bg-white/10 hover:bg-white/20 p-4 transition-all duration-200 border border-white/10 group/item">
+              <span class="p-2 rounded-lg bg-red-500/20 text-red-400 group-hover/item:scale-105 transition-transform"><i data-lucide="alert-triangle" class="h-5 w-5 animate-pulse"></i></span>
+              <div>
+                <span class="block text-[10px] uppercase font-bold text-slate-300 tracking-wider">Línea Emergencia 24/7</span>
+                <span class="block text-sm font-bold tracking-tight">+56 9 3183 1327</span>
+              </div>
+            </a>
+            <a href="tel:+56967579214" class="flex items-center gap-3 rounded-xl bg-white/5 hover:bg-white/10 p-4 transition-all duration-200 border border-white/5 group/item">
+              <span class="p-2 rounded-lg bg-secondary/20 text-secondary group-hover/item:scale-105 transition-transform"><i data-lucide="headphones" class="h-5 w-5"></i></span>
+              <div>
+                <span class="block text-[10px] uppercase font-bold text-slate-300 tracking-wider">Área Ventas y Cotización</span>
+                <span class="block text-sm font-bold tracking-tight">+56 9 6757 9214</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form: Solicitar Cotización -->
+        <div id="cotizar" class="bg-white rounded-3xl p-6 shadow-premium border border-slate-100/50">
+          <h3 class="text-lg font-bold font-display text-navy border-b border-slate-100 pb-4 flex items-center gap-2">
+            <i data-lucide="file-text" class="h-5 w-5 text-cyan"></i> Cotizar este Servicio
+          </h3>
+          <form id="quoteForm" class="mt-5 space-y-4">
+            <div>
+              <label for="formNombre" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Nombre completo *</label>
+              <input required id="formNombre" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10" placeholder="Ej: Juan Pérez" />
+            </div>
+            <div>
+              <label for="formEmail" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Correo electrónico *</label>
+              <input required type="email" id="formEmail" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10" placeholder="juan@ejemplo.com" />
+            </div>
+            <div>
+              <label for="formAsunto" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Servicio de interés *</label>
+              <select required id="formAsunto" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-600 bg-white outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10">
+                <option value="Mantenimiento Multimarca">Mantenimiento Multimarca</option>
+                <option value="Reparación y Normalización">Reparación y Normalización</option>
+                <option value="Importación e Instalación">Importación e Instalación</option>
+                <option value="Mantenimiento Correctivo">Mantenimiento Correctivo</option>
+              </select>
+            </div>
+            <div>
+              <label for="formMensaje" class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Detalles adicionales *</label>
+              <textarea required rows="4" id="formMensaje" class="mt-2 w-full resize-none rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10" placeholder="Describe brevemente tus requerimientos o número de equipos..."></textarea>
+            </div>
+            
+            <button class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-purple hover:bg-purple-dark text-white font-bold py-4 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md shadow-purple/10 text-sm" type="submit">
+              Enviar solicitud <i data-lucide="arrow-up-right" class="h-4.5 w-4.5"></i>
+            </button>
+            
+            <!-- Success feedback alert -->
+            <div id="quoteSuccessMsg" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl p-4 flex items-start gap-3 transition-all duration-300">
+              <i data-lucide="check-circle" class="h-5.5 w-5.5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="block text-sm font-bold">¡Solicitud recibida!</strong>
+                <span class="block text-xs mt-1 text-emerald-700/90">Te responderemos con tu cotización formal a la brevedad.</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- TRUST & METRIC INFO SECTION -->
+  <section class="bg-primary text-white py-12 border-t border-white/5 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan/5 rounded-full blur-[80px] pointer-events-none"></div>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="text-left">
+        <h3 class="text-xl md:text-2xl font-bold font-display">Trazabilidad garantizada con <span class="text-cyan">AUVO</span></h3>
+        <p class="mt-2 text-sm text-slate-300 font-light leading-relaxed max-w-2xl">
+          Cada servicio técnico realizado en terreno se registra de manera digital, permitiendo a la administración descargar reportes detallados y registros fotográficos al instante.
+        </p>
+      </div>
+      <div class="flex items-center gap-6">
+        <img src="myt-design/base_images/image%2016.png" alt="Auvo Logo" class="h-16 w-auto object-contain bg-white/5 p-3 rounded-2xl border border-white/10" />
+        <div class="text-left">
+          <span class="block text-2xl font-display font-extrabold text-secondary-light" id="dynamicMetricNum">+250</span>
+          <span class="block text-xs text-slate-400 font-bold uppercase tracking-wider" id="dynamicMetricLbl">Equipos en el mercado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white py-12 border-t border-white/5 relative overflow-hidden">
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="flex flex-col gap-10 md:flex-row md:items-center md:justify-between border-b border-white/10 pb-8">
+        <div>
+          <a href="index.html#inicio" class="inline-block">
+            <img src="logo-blanco%201.png" alt="MYT Ascensores" class="h-24 w-auto md:h-28 object-contain" />
+          </a>
+          <p class="mt-6 max-w-xl text-slate-400 leading-relaxed font-light text-sm">
+            Empresa especializada en mantención, reparación e instalación de ascensores. Certificación oficial MINVU. Trazabilidad garantizada.
+          </p>
+        </div>
+        <nav class="flex flex-wrap gap-9 text-slate-400 font-semibold text-sm">
+          <a class="hover:text-secondary transition-colors" href="index.html#inicio">Inicio</a>
+          <a class="hover:text-secondary transition-colors" href="index.html#servicios">Servicios</a>
+          <a class="hover:text-secondary transition-colors" href="index.html#proceso">Proceso</a>
+          <a class="hover:text-secondary transition-colors" href="index.html#preguntas">Preguntas Frecuentes</a>
+          <a class="hover:text-secondary transition-colors" href="index.html#contacto">Contacto</a>
+        </nav>
+      </div>
+      
+      <div class="mt-8 flex flex-col gap-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+        <p>© 2026 MYT Ascensores. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a aria-label="Facebook" class="text-slate-500 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="index.html"><i class="fa-brands fa-facebook text-lg"></i></a>
+          <a aria-label="Instagram" class="text-slate-500 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.instagram.com/mytascensores/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a aria-label="YouTube" class="text-slate-500 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.youtube.com/@mytascensores-zl2pt" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube text-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MINIMALIST FLOATING EMERGENCY ACTION -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <a href="https://wa.me/56931831327" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="group relative flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:bg-[#20ba5a] transition-all hover:scale-105 duration-300">
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+      <span class="absolute right-16 scale-0 group-hover:scale-100 bg-primary text-white text-[11px] font-bold py-2 px-4 rounded-xl shadow-lg border border-slate-800 transition-all duration-200 whitespace-nowrap">
+        WhatsApp 24/7
+      </span>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT BEHAVIORS -->
+  <script>
+    // Extensive Content Data Model (No placeholders, 100% Spanish)
+    const servicesContent = {
+      mantenimiento: {
+        category: 'Servicio Preventivo',
+        title: 'Mantenimiento Multimarca de Ascensores',
+        seoTitle: 'Mantenimiento Multimarca de Ascensores | MYT',
+        meta: 'Servicio preventivo mensual certificado para asegurar la máxima disponibilidad, suavidad y seguridad de sus equipos de transporte vertical.',
+        image: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM.jpeg',
+        overview: 'Nuestro servicio de Mantenimiento Multimarca está diseñado bajo rigurosos estándares internacionales y en estricta conformidad con la normativa legal chilena (Ley 20.296). Realizamos visitas mensuales preventivas programadas, donde ingenieros y técnicos altamente calificados inspeccionan, limpian, lubrican y ajustan más de 50 puntos críticos de control en la cabina, sala de máquinas, pozo y escotilla de los ascensores.<br><br>Nos adaptamos a las particularidades técnicas de cada fabricante (Schindler, Otis, TK Elevator, Mitsubishi, KONE, entre otras), asegurando el uso de repuestos genuinos y prolongando significativamente la vida útil de sus equipos, mientras reducimos las fallas operacionales imprevistas hasta en un 85%.',
+        features: [
+          { title: 'Inspección de 50+ Puntos Críticos', desc: 'Verificación minuciosa de sistemas de freno, limitadores de velocidad, paracaídas de seguridad y switches de límite eléctrico.' },
+          { title: 'Lubricación y Ajuste de Precisión', desc: 'Aplicación de lubricantes especializados en rieles guía, poleas deflectoras, cables de tracción y operadores de puerta para viajes silenciosos.' },
+          { title: 'Limpieza Técnica de Fosa y Escotilla', desc: 'Eliminación exhaustiva de residuos inflamables y grasas acumuladas en el pozo del ascensor para prevenir fallas operativas.' },
+          { title: 'Reporte Técnico con Trazabilidad', desc: 'Emisión digital de un informe detallado posterior a cada mantención con firmas y registro fotográfico en el sistema AUVO.' }
+        ],
+        steps: [
+          { phase: 'Paso 1', title: 'Planificación y Notificación', desc: 'Coordinamos mensualmente el calendario de visitas y enviamos notificaciones automatizadas a la administración del edificio.' },
+          { phase: 'Paso 2', title: 'Inspección en Terreno', desc: 'Técnicos autorizados por el MINVU ejecutan la pauta técnica mensual revisando componentes eléctricos, mecánicos y de cabina.' },
+          { phase: 'Paso 3', title: 'Ajuste Dinámico y Pruebas', desc: 'Calibramos la nivelación de parada, velocidad de apertura de puertas y la suavidad de aceleración/desaceleración.' },
+          { phase: 'Paso 4', title: 'Emisión de Ficha en AUVO', desc: 'El informe técnico digital se firma y se sube automáticamente a la plataforma para el seguimiento histórico transparente de la comunidad.' }
+        ],
+        metric: { num: '+250', lbl: 'Equipos Activos Mantenidos' }
+      },
+      reparacion: {
+        category: 'Servicio Correctivo y Normativo',
+        title: 'Reparación y Normalización de Ascensores',
+        seoTitle: 'Reparación y Normalización de Ascensores | MYT',
+        meta: 'Adecuación a la normativa vigente del MINVU, diagnóstico avanzado y subsanación de observaciones técnicas para obtener tu certificación legal.',
+        image: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(2).jpeg',
+        overview: 'La Ley de Ascensores en Chile exige que todos los equipos de transporte vertical cumplan con rigurosos estándares de seguridad técnica para obtener su certificación legal. Nuestro servicio de Reparación y Normalización se enfoca en diagnosticar fallas estructurales, eléctricas o mecánicas y ejecutar planes de acción rápidos para corregir desviaciones técnicas.<br><br>Desde el cambio de cables de tracción y poleas desgastadas hasta la actualización de tableros de control con tecnología variadora de frecuencia (VVVF) y sistemas de rescate automático (ARD), devolvemos a sus equipos la máxima seguridad operacional y el cumplimiento legal absoluto ante el MINVU.',
+        features: [
+          { title: 'Subsanación de Observaciones de Certificación', desc: 'Corregimos de forma inmediata las no conformidades detectadas en las revisiones de organismos de certificación externa.' },
+          { title: 'Modernización Electrónica (VVVF)', desc: 'Reemplazamos controles de relés por microprocesadores modernos, reduciendo hasta un 40% el consumo energético del edificio.' },
+          { title: 'Renovación de Cables y Poleas de Tracción', desc: 'Cambio de cables de acero de alta resistencia y re-mecanizado de gargantas de poleas para evitar deslizamientos peligrosos.' },
+          { title: 'Seguridad en Cabina y Pasadizo', desc: 'Instalación de barreras infrarrojas de puerta, intercomunicadores de emergencia y sistemas de iluminación autónoma.' }
+        ],
+        steps: [
+          { phase: 'Paso 1', title: 'Análisis de Observaciones', desc: 'Evaluamos la carpeta de certificación rechazada o levantamos un diagnóstico estructural detallado del ascensor.' },
+          { phase: 'Paso 2', title: 'Diseño e Ingeniería de Proyecto', desc: 'Presentamos una cotización detallada de repuestos homologados y un plan calendarizado para mitigar la suspensión del servicio.' },
+          { phase: 'Paso 3', title: 'Ejecución e Instalación Técnica', desc: 'Nuestros montajistas expertos retiran componentes obsoletos e instalan los repuestos certificados bajo estricto control de torque.' },
+          { phase: 'Paso 4', title: 'Prueba de Carga y Recepción', desc: 'Realizamos ensayos dinámicos con sobrecarga física antes del proceso de re-inspección para garantizar la aprobación legal inmediata.' }
+        ],
+        metric: { num: '100%', lbl: 'Aprobación de Certificaciones' }
+      },
+      importacion: {
+        category: 'Proyectos Especiales',
+        title: 'Importación e Instalación de Ascensores',
+        seoTitle: 'Importación e Instalación de Ascensores | MYT',
+        meta: 'Proyectos llave en mano para obras nuevas y reemplazo total. Equipos Gearless eficientes, ingeniería de montaje y aprobación municipal.',
+        image: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(4).jpeg',
+        overview: 'Para obras nuevas, edificios residenciales, comerciales o reemplazos completos de equipos antiguos, MYT ofrece una solución integral de ingeniería en Importación e Instalación de ascensores. Colaboramos estrechamente con prestigiosas fábricas globales para importar tecnologías de punta que se adapten a las dimensiones específicas de su escotilla y a los requerimientos de tráfico de su proyecto.<br><br>Nuestros ingenieros civiles e instaladores mecánicos certificados lideran todo el proceso de montaje estructural, cableado eléctrico, calibración de seguridad y tramitación de la primera certificación ante la municipalidad, asegurando una ejecución de obra limpia, a tiempo y en presupuesto.',
+        features: [
+          { title: 'Estudio de Flujo y Tráfico Vertical', desc: 'Diseñamos la solución óptima evaluando el tráfico del edificio para recomendar la capacidad de carga (kg) y velocidad adecuada.' },
+          { title: 'Tecnología Gearless de Alta Eficiencia', desc: 'Importamos sistemas sin sala de máquinas (MRL), ideales para optimizar el espacio arquitectónico del edificio.' },
+          { title: 'Montaje Mecánico e Ingeniería Láser', desc: 'Instalación de rieles guía, chasis y cabina alineados milimétricamente con instrumentos láser para viajes extremadamente suaves.' },
+          { title: 'Carpeta Técnica y Tramitación DOM', desc: 'Nos encargamos de toda la tramitación legal ante la Dirección de Obras Municipales para la recepción municipal.' }
+        ],
+        steps: [
+          { phase: 'Paso 1', title: 'Diseño e Ingeniería de Pozo', desc: 'Revisamos los planos arquitectónicos de la escotilla para definir el anclaje estructural y las holguras mecánicas.' },
+          { phase: 'Paso 2', title: 'Importación Directa y Logística', desc: 'Coordinamos la fabricación a medida en plantas especializadas internacionales y gestionamos el transporte marítimo seguro.' },
+          { phase: 'Paso 3', title: 'Montaje Estructural Completo', desc: 'Armamos el chasis, motor gearless de imán permanente, tendido de cables de tracción e instalación eléctrica del control.' },
+          { phase: 'Paso 4', title: 'Pruebas de Seguridad e Inscripción', desc: 'Efectuamos el test de paracaídas y el frenado límite antes de certificar e inscribir oficialmente el equipo en el Registro MINVU.' }
+        ],
+        metric: { num: '+50', lbl: 'Edificios Nuevos Habilitados' }
+      },
+      correctivo: {
+        category: 'Servicio Correctivo 24/7',
+        title: 'Mantenimiento Correctivo y Emergencias',
+        seoTitle: 'Servicio de Emergencias 24/7 | MYT Ascensores',
+        meta: 'Asistencia inmediata 24/7 para el rescate rápido de pasajeros, bloqueos y fallas operacionales críticas con técnicos de turno.',
+        image: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(3).jpeg',
+        overview: 'Las interrupciones en el servicio de transporte vertical causan graves inconvenientes en comunidades residenciales, oficinas y recintos de salud. Nuestro Mantenimiento Correctivo y Servicio de Emergencias 24/7 está diseñado para devolver sus ascensores a la operación segura en tiempo récord.<br><br>Contamos con un centro de despacho telefónico permanente y cuadrillas de técnicos de turno equipados con vehículos de respuesta rápida y stock crítico de repuestos multimarca. Priorizamos de forma absoluta los rescates de pasajeros atrapados y los bloqueos totales del equipo, aplicando protocolos de seguridad estandarizados para mitigar cualquier riesgo físico.',
+        features: [
+          { title: 'Respuesta Rápida Telefónica y Despacho 24/7', desc: 'Canal de emergencias exclusivo operativo las 24 horas del día, los 365 días del año, incluyendo fines de semana y festivos.' },
+          { title: 'Técnicos Expertos de Guardia Permanente', desc: 'Personal capacitado en rescate y diagnóstico multimarca listo para movilizarse en cualquier comuna de la Región Metropolitana.' },
+          { title: 'Protocolo Estandarizado de Rescate', desc: 'Procedimientos certificados para la liberación controlada de pasajeros en cabina, priorizando la calma y la seguridad total.' },
+          { title: 'Repuestos Críticos a Bordo', desc: 'Móviles provistos con stock crítico (contactores, patines de puerta, sensores de pozo) para solucionar fallas en la primera visita.' }
+        ],
+        steps: [
+          { phase: 'Paso 1', title: 'Recepción del Incidente', desc: 'Registramos la llamada al +56 9 3183 1327 y clasificamos la urgencia (atrapados o falla de bloqueo de cabina).' },
+          { phase: 'Paso 2', title: 'Despacho de Cuadrilla Técnica', desc: 'Asignamos al móvil de turno más cercano al edificio utilizando nuestro sistema de posicionamiento georreferenciado.' },
+          { phase: 'Paso 3', title: 'Maniobra de Rescate y Seguridad', desc: 'Al llegar, el técnico estabiliza el equipo en la zona de desembarque y procede a evacuar de forma segura a los pasajeros.' },
+          { phase: 'Paso 4', title: 'Diagnóstico Técnico y Reparación', desc: 'Una vez evacuados, diagnosticamos el origen del bloqueo y reparamos el componente para dejar el ascensor operable.' }
+        ],
+        metric: { num: '24 / 7', lbl: 'Disponibilidad de Respuesta' }
+      }
+    };
+
+    // Load Service Content dynamically
+    function loadService(serviceId, runScroll = false) {
+      const data = servicesContent[serviceId];
+      if (!data) return;
+
+      // Update Page Head (SEO & Tab Titles)
+      document.title = data.seoTitle;
+      document.getElementById('metaDescription').setAttribute('content', data.meta);
+      document.getElementById('pageTitle').innerText = data.seoTitle;
+
+      // Update Hero/Banner Elements
+      document.getElementById('breadcrumbCurrent').innerText = data.category;
+      document.getElementById('heroTag').innerHTML = `<i data-lucide="tag" class="h-3 w-3"></i> ${data.category}`;
+      document.getElementById('heroTitle').innerText = data.title;
+      document.getElementById('heroSubtitle').innerText = data.meta;
+
+      // Apply transition animation to main content
+      const contentBox = document.getElementById('mainContentContainer');
+      contentBox.classList.remove('fade-in');
+      void contentBox.offsetWidth; // Force reflow
+      contentBox.classList.add('fade-in');
+
+      // Update Featured Image and texts
+      document.getElementById('featuredImage').src = data.image;
+      document.getElementById('featuredImage').alt = data.title;
+      document.getElementById('overviewText').innerHTML = data.overview;
+
+      // Populate Features list
+      const featuresList = document.getElementById('featuresList');
+      featuresList.innerHTML = '';
+      data.features.forEach(feat => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-3.5 p-4 rounded-2xl hover:bg-surface transition-colors duration-200';
+        li.innerHTML = `
+          <span class="flex-shrink-0 rounded-full bg-secondary/10 p-1.5 text-secondary-dark mt-0.5"><i data-lucide="check" class="h-4 w-4"></i></span>
+          <div>
+            <strong class="block text-slate-800 text-sm md:text-base font-bold">${feat.title}</strong>
+            <span class="block text-slate-500 text-xs md:text-sm mt-0.5 leading-relaxed">${feat.desc}</span>
+          </div>
+        `;
+        featuresList.appendChild(li);
+      });
+
+      // Populate Steps list
+      const stepsContainer = document.getElementById('stepsContainer');
+      stepsContainer.innerHTML = '';
+      data.steps.forEach(step => {
+        const stepDiv = document.createElement('div');
+        stepDiv.className = 'relative pl-12 md:pl-16 group/step';
+        stepDiv.innerHTML = `
+          <span class="absolute left-1.5 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-white border-2 border-slate-200 text-xs font-bold text-slate-500 group-hover/step:border-cyan group-hover/step:text-cyan transition-colors z-10 shadow-sm">
+            ${step.phase.split(' ')[1]}
+          </span>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-cyan">${step.phase}</span>
+            <h4 class="text-base md:text-lg font-bold text-navy mt-0.5 transition-colors group-hover/step:text-cyan">${step.title}</h4>
+            <p class="mt-1 text-xs md:text-sm text-slate-500 leading-relaxed">${step.desc}</p>
+          </div>
+        `;
+        stepsContainer.appendChild(stepDiv);
+      });
+
+      // Update dynamic trust metric
+      document.getElementById('dynamicMetricNum').innerText = data.metric.num;
+      document.getElementById('dynamicMetricLbl').innerText = data.metric.lbl;
+
+      // Set active select option in quote form
+      document.getElementById('formAsunto').value = data.title.includes('Mantenimiento Multimarca') ? 'Mantenimiento Multimarca' : 
+                                                    data.title.includes('Reparación') ? 'Reparación y Normalización' :
+                                                    data.title.includes('Importación') ? 'Importación e Instalación' : 'Mantenimiento Correctivo';
+
+      // Update Sidebar tab states
+      Object.keys(servicesContent).forEach(key => {
+        const btn = document.getElementById('side-tab-' + key);
+        const iconBox = btn.querySelector('.side-icon-box');
+        if (key === serviceId) {
+          btn.className = 'w-full text-left p-3.5 rounded-xl border border-secondary bg-primary-dark shadow-[0_0_15px_rgba(43,199,217,0.15)] transition-all duration-300 group flex items-center justify-between min-h-[64px] text-white';
+          iconBox.className = 'side-icon-box rounded-lg p-2 flex items-center justify-center transition-all bg-secondary text-primary-dark group-hover:scale-105';
+        } else {
+          btn.className = 'w-full text-left p-3.5 rounded-xl border border-slate-100 bg-white transition-all duration-300 group flex items-center justify-between min-h-[64px] hover:border-secondary/20';
+          iconBox.className = 'side-icon-box rounded-lg p-2 flex items-center justify-center transition-all bg-secondary/10 text-secondary-dark group-hover:scale-105';
+        }
+      });
+
+      // Refresh Lucide Icons inside new items
+      lucide.createIcons();
+
+      if (runScroll) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Interactive switch without full reload for premium feel
+    function switchService(serviceKey) {
+      history.pushState({ serviceId: serviceKey }, '', '?id=' + serviceKey);
+      loadService(serviceKey, true);
+    }
+
+    // Handles browser Back/Forward navigation
+    window.addEventListener('popstate', (e) => {
+      const serviceId = (e.state && e.state.serviceId) || new URLSearchParams(window.location.search).get('id') || 'mantenimiento';
+      loadService(serviceId, true);
+    });
+
+    // Initialize page on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceId = urlParams.get('id') || 'mantenimiento';
+      loadService(serviceId, false);
+      
+      // Store initial state
+      history.replaceState({ serviceId: serviceId }, '', '?id=' + serviceId);
+    });
+
+    // Mobile Menu Drawer Toggle
+    const menuToggleBtn = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    menuToggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        menuIcon.setAttribute('data-lucide', 'menu');
+        menuIcon.style.transform = 'rotate(0deg)';
+      } else {
+        menuIcon.setAttribute('data-lucide', 'x');
+        menuIcon.style.transform = 'rotate(90deg)';
+      }
+      lucide.createIcons();
+    });
+
+    // Close mobile drawer when link is clicked
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.setAttribute('data-lucide', 'menu');
+        menuIcon.style.transform = 'rotate(0deg)';
+        lucide.createIcons();
+      });
+    });
+
+    // Sticky header shift on scroll
+    const headerEl = document.getElementById('mainHeader');
+    const logoEl = document.getElementById('headerLogo');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        headerEl.classList.add('glass-nav-scrolled');
+        headerEl.classList.remove('glass-nav');
+        logoEl.classList.remove('h-20', 'md:h-28', 'lg:h-32');
+        logoEl.classList.add('h-14', 'md:h-20', 'lg:h-24');
+      } else {
+        headerEl.classList.add('glass-nav');
+        headerEl.classList.remove('glass-nav-scrolled');
+        logoEl.classList.remove('h-14', 'md:h-20', 'lg:h-24');
+        logoEl.classList.add('h-20', 'md:h-28', 'lg:h-32');
+      }
+    });
+
+    // Quote Form success state toast
+    const quoteForm = document.getElementById('quoteForm');
+    const quoteSuccessMsg = document.getElementById('quoteSuccessMsg');
+
+    quoteForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      quoteSuccessMsg.classList.remove('hidden');
+      quoteSuccessMsg.classList.add('block');
+      
+      setTimeout(() => {
+        quoteForm.reset();
+      }, 500);
+
+      setTimeout(() => {
+        quoteSuccessMsg.classList.add('hidden');
+        quoteSuccessMsg.classList.remove('block');
+      }, 6000);
+    });
+
+    // Initialize Lucide Icons on load
+    lucide.createIcons();
+  </script>
+</body>
+</html>

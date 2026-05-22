@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MYT Ascensores: mantención, reparación e instalación de ascensores en Chile. Servicio multimarca certificado MINVU." />
+  <title>MYT Ascensores | Soluciones avanzadas de transporte vertical</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Brands Support -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            primary: '#1D3273',
+            'primary-light': '#2a4494',
+            'primary-dark': '#13214c',
+            secondary: '#2BC7D9',
+            'secondary-light': '#5ce0f0',
+            'secondary-dark': '#1ba7b7',
+            tertiary: '#72BF6F',
+            'tertiary-light': '#91d48e',
+            'tertiary-dark': '#56a353',
+            
+            // Aliases to avoid breaking legacy classes
+            navy: '#1D3273',
+            'navy-light': '#2a4494',
+            'navy-dark': '#13214c',
+            ink: '#121e42',
+            cyan: '#2BC7D9',
+            'cyan-light': '#5ce0f0',
+            'cyan-dark': '#1ba7b7',
+            purple: '#72BF6F',
+            'purple-light': '#91d48e',
+            'purple-dark': '#56a353',
+            
+            surface: '#f3f6fa',
+            'surface-card': '#ffffff',
+            'surface-muted': '#f8fafc',
+          },
+          boxShadow: {
+            premium: '0 20px 50px rgba(29, 50, 115, 0.08)',
+            premiumGlow: '0 0 0 4px rgba(43, 199, 217, 0.15), 0 20px 40px rgba(43, 199, 217, 0.12)',
+            cardHover: '0 30px 60px rgba(29, 50, 115, 0.12)',
+          }
+        }
+      }
+    };
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom animations and styling transitions */
+    .hero-gradient-overlay {
+      background: linear-gradient(135deg, rgba(29, 50, 115, 0.96) 0%, rgba(19, 33, 76, 0.85) 50%, rgba(43, 199, 217, 0.4) 100%);
+    }
+    .glass-nav {
+      background: #f3f6fa;
+    }
+    .glass-nav-scrolled {
+      background: #f3f6fa;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    .faq-answer {
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-item.is-open .faq-answer {
+      grid-template-rows: 1fr;
+    }
+    .faq-item.is-open .faq-icon {
+      transform: rotate(180deg);
+      color: #2BC7D9;
+    }
+    .faq-item.is-open {
+      border-color: #2BC7D9;
+      background-color: #ffffff;
+      box-shadow: 0 10px 30px rgba(29, 50, 115, 0.04);
+    }
+    
+    /* Elegant line drawing animation for progress */
+    .step-line::after {
+      content: '';
+      position: absolute;
+      background: repeating-linear-gradient(to bottom, #2BC7D9, #2BC7D9 4px, transparent 4px, transparent 8px);
+      width: 2px;
+      top: 2.5rem;
+      bottom: -1rem;
+      left: 1.25rem;
+    }
+    @media (min-width: 1024px) {
+      .step-line::after {
+        display: none;
+      }
+    }
+
+    /* Solid Brand Color Utility Overrides (Bulletproof CSS fallbacks) */
+    .bg-primary {
+      background-color: #1D3273 !important;
+    }
+    .bg-primary-dark {
+      background-color: #13214c !important;
+    }
+    .text-primary {
+      color: #1D3273 !important;
+    }
+    .border-primary {
+      border-color: #1D3273 !important;
+    }
+    
+    .bg-navy {
+      background-color: #1D3273 !important;
+    }
+    .text-navy {
+      color: #1D3273 !important;
+    }
+    .border-navy {
+      border-color: #1D3273 !important;
+    }
+
+    .bg-secondary {
+      background-color: #2BC7D9 !important;
+    }
+    .text-secondary {
+      color: #2BC7D9 !important;
+    }
+    .border-secondary {
+      border-color: #2BC7D9 !important;
+    }
+
+    .bg-cyan {
+      background-color: #2BC7D9 !important;
+    }
+    .text-cyan {
+      color: #2BC7D9 !important;
+    }
+    .border-cyan {
+      border-color: #2BC7D9 !important;
+    }
+
+    .bg-tertiary {
+      background-color: #72BF6F !important;
+    }
+    .text-tertiary {
+      color: #72BF6F !important;
+    }
+    .border-tertiary {
+      border-color: #72BF6F !important;
+    }
+
+    .bg-purple {
+      background-color: #72BF6F !important;
+    }
+    .text-purple {
+      color: #72BF6F !important;
+    }
+    .border-purple {
+      border-color: #72BF6F !important;
+    }
+  </style>
+</head>
+<body class="bg-surface text-ink font-sans antialiased overflow-x-hidden">
+
+  <!-- TOP INFO BAR -->
+  <div class="bg-primary text-white border-b border-white/5 relative z-50">
+    <div class="mx-auto flex max-w-7xl flex-col sm:flex-row items-center justify-between gap-3 px-6 py-4 text-xs md:text-sm lg:px-8">
+      <div class="flex flex-wrap justify-center sm:justify-start items-center gap-x-7 gap-y-2">
+        <a class="inline-flex items-center gap-2 hover:text-secondary transition-colors" href="tel:+56967579214">
+          <strong class="text-white font-bold">Ventas:</strong>
+          <i data-lucide="phone" class="h-4 w-4 text-secondary"></i>
+          <span class="font-semibold">+56 9 6757 9214</span>
+        </a>
+        <a class="inline-flex items-center gap-2 hover:text-secondary transition-colors" href="tel:+56931831327">
+          <strong class="text-white font-bold">Emergencias:</strong>
+          <i data-lucide="phone" class="h-4 w-4 text-red-400 animate-pulse"></i>
+          <span class="font-semibold">+56 9 3183 1327</span>
+        </a>
+        <span class="inline-flex items-center gap-2 text-white/90">
+          <i data-lucide="map-pin" class="h-4 w-4 text-secondary"></i>
+          Román Díaz # 928, Providencia
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3">
+          <a aria-label="Facebook" class="text-white/60 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="index.html"><i class="fa-brands fa-facebook text-lg"></i></a>
+          <a aria-label="Instagram" class="text-white/60 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.instagram.com/mytascensores/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a aria-label="YouTube" class="text-white/60 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.youtube.com/@mytascensores-zl2pt" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube text-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER & NAVBAR -->
+  <header id="mainHeader" class="sticky top-0 z-40 transition-all duration-300 glass-nav">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <!-- Logo size enlarged significantly for prominent branding -->
+        <img id="headerLogo" src="LOGO MYT NUEVO.png" alt="MYT Ascensores" class="h-20 w-auto md:h-28 lg:h-32 object-contain transition-all duration-300" />
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <div id="desktopNavLinks" class="hidden md:flex items-center gap-8 lg:gap-10">
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="#inicio">Inicio</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="nosotros.html">Nosotros</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="#servicios">Servicios</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="#proceso">Proceso</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="#preguntas">Preguntas Frecuentes</a>
+        <a class="nav-link font-medium text-slate-700 hover:text-cyan transition-colors py-2 text-sm lg:text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cyan hover:after:w-full after:transition-all" href="#contacto">Contacto</a>
+        
+        <!-- CTA Link styled with solid filled brand cyan (whiteblueish) background and white text -->
+        <a id="ctaButton" class="inline-flex items-center gap-2 rounded-lg bg-cyan border border-cyan px-5 py-3 font-semibold text-white hover:bg-cyan-dark hover:border-cyan-dark shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all text-sm" href="#contacto">
+          Solicitar cotización 
+          <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="menuToggle" class="rounded-xl border border-slate-200 p-2.5 text-slate-700 md:hidden hover:bg-slate-50 transition-colors" aria-label="Abrir menú">
+        <i data-lucide="menu" id="menuIcon" class="h-6 w-6 transition-transform duration-300"></i>
+      </button>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobileMenu" class="hidden absolute left-6 right-6 top-24 rounded-2xl bg-white p-6 shadow-premium border border-slate-100 flex flex-col gap-4 md:hidden">
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="#inicio">Inicio</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="nosotros.html">Nosotros</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="#servicios">Servicios</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="#proceso">Proceso</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="#preguntas">Preguntas Frecuentes</a>
+        <a class="block py-2.5 px-4 rounded-xl text-slate-700 font-semibold hover:bg-surface hover:text-cyan transition-all" href="#contacto">Contacto</a>
+        <hr class="border-slate-100 my-2" />
+        <a class="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan border border-cyan py-4 font-bold text-white shadow-sm hover:bg-cyan-dark hover:border-cyan-dark transition-all" href="#contacto">
+          Solicitar Cotización 
+          <i data-lucide="arrow-up-right" class="h-4.5 w-4.5"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main id="inicio" class="relative">
+    <section class="mx-auto max-w-7xl px-6 pt-8 pb-16 lg:px-8">
+      <!-- Rounded radius adjusted tighter to match reference -->
+      <div class="relative min-h-[560px] rounded-xl overflow-hidden shadow-premium">
+        
+        <!-- Hero Background Image & Gradient -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('myt-design/base_images/hero-bg.png');"></div>
+        <div class="absolute inset-0 hero-gradient-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 flex h-full min-h-[560px] items-center px-6 py-16 md:px-12 lg:px-20">
+          <div class="max-w-3xl text-left">
+            <h1 class="text-5xl font-extrabold leading-[.96] tracking-tight text-white md:text-7xl font-display">
+              Soluciones avanzadas para ascensores
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-white/85 max-w-2xl font-light">
+              Empresa certificada **Rol N°256 Resolución N°1452** en el registro de proveedores técnicos del MINVU. Orientada a la asistencia de servicios integrales en mantención preventiva y correctiva de transporte vertical.
+            </p>
+            
+            <div class="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-white/90">
+              <span class="inline-flex items-center gap-2">
+                <i data-lucide="circle-check" class="h-5 w-5 text-cyan"></i> Servicio multimarca
+              </span>
+              <span class="inline-flex items-center gap-2">
+                <i data-lucide="circle-check" class="h-5 w-5 text-cyan"></i> Atención profesional
+              </span>
+              <span class="inline-flex items-center gap-2">
+                <i data-lucide="circle-check" class="h-5 w-5 text-cyan"></i> Soluciones a medida
+              </span>
+            </div>
+            
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a href="#contacto" class="inline-flex items-center gap-2 rounded-md bg-tertiary px-6 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-tertiary-dark text-sm md:text-base shadow-lg">
+                Solicitar cotización 
+                <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+              </a>
+              <a href="#servicios" class="inline-flex items-center justify-center rounded-md border border-white/80 px-6 py-4 font-semibold text-white transition hover:bg-white hover:text-navy hover:-translate-y-0.5 text-sm md:text-base">
+                Ver servicios
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS / TRUSTED LOGOS SECTION -->
+    <section class="mx-auto max-w-7xl px-6 py-10 lg:px-8 text-center">
+      <!-- "Clientes Satisfechos" Title added with dynamic coloring scheme -->
+      <h2 class="text-4xl font-extrabold md:text-5xl font-display text-navy mb-4">
+        <span class="text-cyan">Clientes</span> satisfechos
+      </h2>
+      <p class="text-slate-600 text-lg mb-12">Empresas y comunidades que han confiado en nuestro trabajo.</p>
+      
+      <!-- Sliced, individual clickable elements for logo list -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center max-w-4xl mx-auto">
+        <a href="https://www.codelco.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+          <img src="myt-design/clients/logo-codelco.png" alt="Codelco" class="max-h-full max-w-full object-contain transition-all duration-300" />
+        </a>
+        <a href="https://www.smartfit.cl/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+          <img src="myt-design/clients/logo-smartfit.png" alt="Smart Fit" class="max-h-full max-w-full object-contain transition-all duration-300" />
+        </a>
+        <a href="#contacto" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+          <img src="myt-design/clients/Frame%2088.png" alt="Cliente MYT 1" class="max-h-full max-w-full object-contain transition-all duration-300" />
+        </a>
+        <a href="#contacto" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+          <img src="myt-design/clients/Frame%2089.png" alt="Cliente MYT 2" class="max-h-full max-w-full object-contain transition-all duration-300" />
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <!-- Grid layout displays all 4 services at once, aligning with the base -->
+    <section id="servicios" class="bg-primary py-14 lg:py-16 text-white relative overflow-hidden">
+      <!-- Background subtle elements -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-purple/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <span class="inline-flex items-center gap-2 font-display font-semibold text-cyan text-sm tracking-wider uppercase">
+            <i data-lucide="cog" class="h-4 w-4"></i> Servicios Especializados
+          </span>
+          <h2 class="mt-7 text-4xl font-extrabold md:text-5xl font-display leading-tight">
+            <span class="text-cyan">Soluciones</span> para cada necesidad
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-white/80">
+            Los servicios que MYT entrega a sus clientes son de óptima calidad, innovadores y destinados a satisfacer adecuada y oportunamente sus necesidades.
+          </p>
+        </div>
+
+        <!-- 2-Column Split Layout for Services -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-12">
+          
+          <!-- Column 1: 2x2 Grid of Service Tabs (lg:col-span-7) -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 self-center">
+            
+            <!-- Tab 1: Mantenimiento (Active by default) -->
+            <button onclick="setActiveService('mantenimiento')" id="tab-mantenimiento" class="service-tab text-left p-3 rounded-xl border border-cyan bg-white shadow-[0_0_15px_rgba(53,191,240,0.2)] opacity-100 transition-all duration-300 group flex flex-col justify-between min-h-[85px] relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-12 h-12 bg-cyan/5 rounded-bl-full blur-xl pointer-events-none transition-all group-hover:bg-cyan/15"></div>
+              <div class="flex items-start justify-between w-full">
+                <span class="service-tab-icon rounded-lg bg-cyan text-white p-1.5 shadow-md border border-cyan/10 transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
+                  <i data-lucide="clipboard-check" class="h-4 w-4"></i>
+                </span>
+                <span class="text-cyan transition-colors">
+                  <i data-lucide="arrow-up-right" class="h-3 w-3"></i>
+                </span>
+              </div>
+              <div class="mt-1.5">
+                <p class="text-[8px] font-bold uppercase tracking-wider text-cyan-dark group-hover:text-cyan transition-colors">Servicio Preventivo</p>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-navy mt-0.5 group-hover:text-cyan transition-colors">Mantenimiento Multimarca</h3>
+              </div>
+            </button>
+
+            <!-- Tab 2: Reparacion -->
+            <button onclick="setActiveService('reparacion')" id="tab-reparacion" class="service-tab text-left p-3 rounded-xl border border-slate-100 bg-white opacity-85 hover:opacity-100 hover:border-cyan/30 transition-all duration-300 group flex flex-col justify-between min-h-[85px] relative overflow-hidden shadow-sm">
+              <div class="absolute top-0 right-0 w-12 h-12 bg-cyan/5 rounded-bl-full blur-xl pointer-events-none transition-all group-hover:bg-cyan/15"></div>
+              <div class="flex items-start justify-between w-full">
+                <span class="service-tab-icon rounded-lg bg-cyan/10 text-cyan p-1.5 shadow-sm border border-cyan/10 transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
+                  <i data-lucide="cog" class="h-4 w-4"></i>
+                </span>
+                <span class="text-slate-400 group-hover:text-cyan transition-colors">
+                  <i data-lucide="arrow-up-right" class="h-3 w-3"></i>
+                </span>
+              </div>
+              <div class="mt-1.5">
+                <p class="text-[8px] font-bold uppercase tracking-wider text-cyan-dark group-hover:text-cyan transition-colors">Servicio Correctivo</p>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-navy mt-0.5 group-hover:text-cyan transition-colors">Reparación y Normalización</h3>
+              </div>
+            </button>
+
+            <!-- Tab 3: Importacion -->
+            <button onclick="setActiveService('importacion')" id="tab-importacion" class="service-tab text-left p-3 rounded-xl border border-slate-100 bg-white opacity-85 hover:opacity-100 hover:border-cyan/30 transition-all duration-300 group flex flex-col justify-between min-h-[85px] relative overflow-hidden shadow-sm">
+              <div class="absolute top-0 right-0 w-12 h-12 bg-cyan/5 rounded-bl-full blur-xl pointer-events-none transition-all group-hover:bg-cyan/15"></div>
+              <div class="flex items-start justify-between w-full">
+                <span class="service-tab-icon rounded-lg bg-cyan/10 text-cyan p-1.5 shadow-sm border border-cyan/10 transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
+                  <i data-lucide="download" class="h-4 w-4"></i>
+                </span>
+                <span class="text-slate-400 group-hover:text-cyan transition-colors">
+                  <i data-lucide="arrow-up-right" class="h-3 w-3"></i>
+                </span>
+              </div>
+              <div class="mt-1.5">
+                <p class="text-[8px] font-bold uppercase tracking-wider text-cyan-dark group-hover:text-cyan transition-colors">Proyectos Especiales</p>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-navy mt-0.5 group-hover:text-cyan transition-colors">Importación e Instalación</h3>
+              </div>
+            </button>
+
+            <!-- Tab 4: Correctivo -->
+            <button onclick="setActiveService('correctivo')" id="tab-correctivo" class="service-tab text-left p-3 rounded-xl border border-slate-100 bg-white opacity-85 hover:opacity-100 hover:border-cyan/30 transition-all duration-300 group flex flex-col justify-between min-h-[85px] relative overflow-hidden shadow-sm">
+              <div class="absolute top-0 right-0 w-12 h-12 bg-cyan/5 rounded-bl-full blur-xl pointer-events-none transition-all group-hover:bg-cyan/15"></div>
+              <div class="flex items-start justify-between w-full">
+                <span class="service-tab-icon rounded-lg bg-cyan/10 text-cyan p-1.5 shadow-sm border border-cyan/10 transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
+                  <i data-lucide="clipboard-list" class="h-4 w-4"></i>
+                </span>
+                <span class="text-slate-400 group-hover:text-cyan transition-colors">
+                  <i data-lucide="arrow-up-right" class="h-3 w-3"></i>
+                </span>
+              </div>
+              <div class="mt-1.5">
+                <p class="text-[8px] font-bold uppercase tracking-wider text-cyan-dark group-hover:text-cyan transition-colors">Servicio Correctivo 24/7</p>
+                <h3 class="font-display font-bold text-xs sm:text-sm text-navy mt-0.5 group-hover:text-cyan transition-colors">Mantenimiento Correctivo</h3>
+              </div>
+            </button>
+
+          </div>
+
+          <!-- Column 2: Service Description Card Box (lg:col-span-5) -->
+          <div class="lg:col-span-5">
+            <div id="service-details-card" class="bg-white border border-slate-100 rounded-3xl flex flex-col justify-between shadow-premium h-full min-h-[400px] relative overflow-hidden group">
+              
+              <!-- Card Header with Navy background -->
+              <div class="bg-primary-dark py-5 px-6 flex items-center gap-4 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-32 h-32 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
+                <span id="detail-icon-box" class="relative z-10 rounded-2xl bg-secondary text-primary p-3 shadow-lg shadow-secondary/10 flex items-center justify-center">
+                  <i id="detail-icon" data-lucide="clipboard-check" class="h-6 w-6"></i>
+                </span>
+                <div class="relative z-10">
+                  <span id="detail-category" class="text-xs font-bold uppercase tracking-wider text-secondary">Servicio Preventivo</span>
+                  <h3 id="detail-title" class="font-display font-extrabold text-2xl text-white mt-1">Mantenimiento Multimarca</h3>
+                </div>
+              </div>
+
+              <!-- Card Body with White background -->
+              <div class="py-6 px-6 flex flex-col justify-between flex-1 bg-white relative overflow-hidden">
+                <!-- Background subtle glow inside card body -->
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none group-hover:bg-secondary/10 transition-all duration-500"></div>
+                <div class="absolute -left-20 -top-20 w-64 h-64 bg-tertiary/5 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="relative z-10">
+                  <!-- Description & Features -->
+                  <div>
+                    <p id="detail-description" class="text-sm leading-relaxed text-slate-600 font-normal">
+                      Son aquellas intervenciones que requieren alto conocimiento técnico, respetando los procedimientos y protocolos del fabricante, según marca y modelo, realizadas mensualmente según la normativa vigente.
+                    </p>
+                    
+                    <ul id="detail-features" class="mt-4 space-y-2">
+                      <!-- Features list populated dynamically -->
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Stats & CTA Button -->
+                <div class="relative z-10 mt-6 pt-4 border-t border-slate-100">
+                  <!-- Metrics -->
+                  <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                    <div class="border-r border-slate-100 last:border-0 pr-2">
+                      <strong id="detail-stat1-num" class="block text-2xl font-display font-extrabold text-secondary-dark">+250</strong>
+                      <span id="detail-stat1-lbl" class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Equipos</span>
+                    </div>
+                    <div class="border-r border-slate-100 last:border-0 px-2">
+                      <strong id="detail-stat2-num" class="block text-2xl font-display font-extrabold text-primary">+120</strong>
+                      <span id="detail-stat2-lbl" class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Servicios</span>
+                    </div>
+                    <div class="px-2">
+                      <strong id="detail-stat3-num" class="block text-2xl font-display font-extrabold text-secondary-dark">100%</strong>
+                      <span id="detail-stat3-lbl" class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Garantía</span>
+                    </div>
+                  </div>
+
+                  <!-- CTA Button -->
+                  <a id="detail-cta" href="servicio.html?id=mantenimiento" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary hover:bg-secondary text-white font-bold px-5 py-3 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md shadow-primary/15 text-sm">
+                    Ver más detalles <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HOW WE WORK / PROCESS SECTION -->
+    <section id="proceso" class="bg-white py-14 lg:py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <p class="inline-flex items-center gap-2 font-bold text-slate-400">
+          <i data-lucide="settings" class="h-5 w-5"></i> Nuestro proceso
+        </p>
+        <h2 class="mt-6 text-4xl font-extrabold md:text-5xl font-display">
+          Como <span class="text-cyan">trabajamos</span>
+        </h2>
+        <p class="mt-5 max-w-5xl text-lg text-slate-600 leading-relaxed">
+          Acompañamos cada proyecto con una atención ordenada, desde la evaluación inicial hasta la ejecución del servicio y su seguimiento.
+        </p>
+        
+        <div class="mt-12 grid gap-12 lg:grid-cols-[1.15fr_.85fr] items-stretch">
+          <div class="relative rounded-xl overflow-hidden shadow-premium group h-full min-h-[380px] lg:min-h-[480px]">
+            <img src="myt-design/base_images/1163 1.png" alt="Edificio corporativo" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+            <div class="absolute left-6 top-20 rounded-2xl bg-white/75 p-5 backdrop-blur"><strong class="block text-3xl text-purple font-display font-extrabold">+250</strong><span class="text-slate-600 text-sm font-medium">Equipos en el mercado</span></div>
+            <div class="absolute right-6 top-10 rounded-2xl bg-white/75 p-5 backdrop-blur"><strong class="block text-3xl text-purple font-display font-extrabold">+120</strong><span class="text-slate-600 text-sm font-medium">Servicios realizados</span></div>
+          </div>
+          
+          <!-- Metodología: steps match the height of the image and distribute space evenly on large screens -->
+          <div class="flex flex-col justify-between gap-5 relative h-full">
+            
+            <div class="lift-card rounded-xl bg-surface p-5 border border-slate-100 hover:border-cyan/30 hover:bg-white hover:shadow-premium transition-all duration-300 relative flex flex-col justify-center flex-1">
+              <p class="font-bold text-cyan text-xs uppercase tracking-wider">Paso 1</p>
+              <h3 class="mt-1.5 flex items-center gap-3 text-lg md:text-xl font-extrabold font-display text-navy">
+                <i data-lucide="file-search" class="h-5.5 w-5.5 text-slate-400"></i>Evaluamos la necesidad
+              </h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                Revisamos el requerimiento para definir la mejor solución.
+              </p>
+            </div>
+            
+            <div class="lift-card rounded-xl bg-surface p-5 border border-slate-100 hover:border-cyan/30 hover:bg-white hover:shadow-premium transition-all duration-300 relative flex flex-col justify-center flex-1">
+              <p class="font-bold text-cyan text-xs uppercase tracking-wider">Paso 2</p>
+              <h3 class="mt-1.5 flex items-center gap-3 text-lg md:text-xl font-extrabold font-display text-navy">
+                <i data-lucide="clipboard-check" class="h-5.5 w-5.5 text-slate-400"></i>Proponemos la solución
+              </h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                Planteamos una propuesta técnica según cada caso.
+              </p>
+            </div>
+            
+            <div class="lift-card rounded-xl bg-surface p-5 border border-slate-100 hover:border-cyan/30 hover:bg-white hover:shadow-premium transition-all duration-300 relative flex flex-col justify-center flex-1">
+              <p class="font-bold text-cyan text-xs uppercase tracking-wider">Paso 3</p>
+              <h3 class="mt-1.5 flex items-center gap-3 text-lg md:text-xl font-extrabold font-display text-navy">
+                <i data-lucide="file-check" class="h-5.5 w-5.5 text-slate-400"></i>Ejecutamos y damos seguimiento
+              </h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                Realizamos el servicio y acompañamos el proceso.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Elegant timed slider gallery showing 4 items at a time on desktop, with Lightbox pop-up -->
+        <div class="mt-10 relative group px-2">
+          <!-- Viewport -->
+          <div class="overflow-hidden rounded-2xl border border-slate-100 shadow-md">
+            <div id="gallery-slider" class="flex transition-transform duration-500 ease-in-out">
+              
+              <!-- Slide 1 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(0)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM.jpeg" alt="Inspección Técnica de Cabina y Sistemas" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(1)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(1).jpeg" alt="Mantenimiento Preventivo de Poleas y Tracción" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(2)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(2).jpeg" alt="Modernización de Equipos y Tableros de Control" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(3)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(3).jpeg" alt="Servicio Técnico Especializado Multimarca" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(4)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(4).jpeg" alt="Instalación y Ajuste de Sistemas de Seguridad" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(5)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.41%20PM.jpeg" alt="Inspección de Motores y Limitadores de Velocidad" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(6)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.41%20PM%20(1).jpeg" alt="Calibración de Sensores e Indicadores Digitales" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 8 -->
+              <div class="w-full sm:w-1/2 md:w-1/4 shrink-0 p-2">
+                <div class="relative overflow-hidden rounded-xl shadow-sm border border-slate-100/80 group/slide h-40 cursor-pointer" onclick="openLightbox(7)">
+                  <img src="myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.41%20PM%20(2).jpeg" alt="Control de Calidad y Entrega de Proyectos" class="h-full w-full object-cover transition-transform duration-500 group-hover/slide:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent opacity-0 group-hover/slide:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-xs font-semibold text-white flex items-center gap-1.5"><i data-lucide="zoom-in" class="h-4 w-4"></i> Ampliar</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <button onclick="prevSlide()" aria-label="Anterior diapositiva" class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-navy p-2.5 rounded-full shadow-lg border border-slate-200 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105 z-10 flex items-center justify-center">
+            <i data-lucide="chevron-left" class="h-5 w-5"></i>
+          </button>
+          <button onclick="nextSlide()" aria-label="Siguiente diapositiva" class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-navy p-2.5 rounded-full shadow-lg border border-slate-200 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105 z-10 flex items-center justify-center">
+            <i data-lucide="chevron-right" class="h-5 w-5"></i>
+          </button>
+
+          <!-- Dot Indicators -->
+          <div id="slider-dots" class="flex justify-center gap-2 mt-6"></div>
+        </div>
+        
+        <!-- EQUIPOS CON QUE TRABAJAMOS -->
+        <div class="mt-16 text-center">
+          <h2 class="text-4xl font-extrabold md:text-5xl font-display text-navy mb-4">
+            <span class="text-cyan">Equipos</span> con que trabajamos
+          </h2>
+          <p class="text-slate-600 text-lg mb-12">Tecnología de vanguardia y componentes de los principales fabricantes del mundo.</p>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center max-w-4xl mx-auto">
+            <a href="https://www.schindler.cl/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+              <img src="myt-design/base_images/image 4.png" alt="Schindler" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            </a>
+            <a href="https://www.otis.com/es/cl/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+              <img src="myt-design/base_images/image 5.png" alt="Otis" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            </a>
+            <a href="https://www.tkelevator.com/cl-es/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+              <img src="myt-design/base_images/image 7.png" alt="thyssenkrupp" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            </a>
+            <a href="https://www.mitsubishielectric.cl/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-6 bg-white rounded-xl border border-slate-100 hover:border-cyan/30 hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-28">
+              <img src="myt-design/base_images/image 6.png" alt="Mitsubishi Electric" class="max-h-full max-w-full object-contain transition-all duration-300" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUESTIONS & FAQ SECTION -->
+    <section id="preguntas" class="bg-surface py-14 lg:py-16">
+      <div class="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[.72fr_1.15fr] lg:px-8">
+        <div>
+          <p class="inline-flex items-center gap-2 font-bold text-slate-400">
+            <i data-lucide="settings" class="h-5 w-5"></i> Preguntas frecuentes
+          </p>
+          <h2 class="mt-6 text-4xl font-extrabold md:text-5xl font-display text-navy">
+            <span class="text-cyan">Resolvemos</span> tus dudas
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            Respondemos algunas consultas habituales sobre nuestros servicios, el proceso de atención y la forma de solicitar una evaluación o cotización.
+          </p>
+          
+          <div class="mt-12 rounded-xl bg-white p-8 shadow-premium border border-slate-100">
+            <h3 class="flex items-center gap-4 text-2xl font-extrabold font-display text-navy">
+              <i data-lucide="help-circle" class="h-7 w-7 text-cyan"></i> ¿Necesitas ayuda directa?
+            </h3>
+            <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+              Si necesitas más información, llámanos y te ayudaremos con tu requerimiento.
+            </p>
+            
+            <div class="mt-8 grid gap-6 sm:grid-cols-2">
+              <a href="tel:+56931831327" class="rounded-xl bg-cyan p-5 font-semibold text-white shadow-md hover:bg-cyan-dark transition-all transform hover:-translate-y-0.5">
+                <i data-lucide="alert-triangle" class="mb-4 h-8 w-8 text-white animate-pulse"></i>
+                Emergencias<br>
+                <span class="mt-2 block text-sm sm:text-base font-normal whitespace-nowrap tracking-tight">+56 9 3183 1327</span>
+              </a>
+              <a href="tel:+56967579214" class="rounded-xl border border-slate-200 p-5 font-semibold text-navy hover:bg-slate-50 transition-all transform hover:-translate-y-0.5">
+                <i data-lucide="headphones" class="mb-4 h-8 w-8 text-cyan"></i>
+                Ventas<br>
+                <span class="mt-2 block text-sm sm:text-base font-normal whitespace-nowrap tracking-tight">+56 9 6757 9214</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="self-start space-y-4">
+          
+          <!-- Accordion 1 -->
+          <div class="faq-item group border border-slate-200 bg-white rounded-xl transition-all duration-300">
+            <button class="faq-toggle flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-display font-bold text-navy hover:text-cyan transition-colors" aria-expanded="false">
+              <span>¿Trabajan con distintas marcas de ascensores?</span>
+              <span class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-navy transition-transform duration-300 faq-icon group-hover:bg-cyan/15 group-hover:text-cyan">
+                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+              </span>
+            </button>
+            <div class="faq-answer grid transition-all">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-6 text-base leading-relaxed text-slate-500 border-t border-slate-100 pt-4">
+                  Sí, atendemos ascensores de distintas marcas, ajustando cada servicio al tipo de equipo y necesidad técnica.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 2 -->
+          <div class="faq-item group border border-slate-200 bg-white rounded-xl transition-all duration-300">
+            <button class="faq-toggle flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-display font-bold text-navy hover:text-cyan transition-colors" aria-expanded="false">
+              <span>¿Qué servicios ofrecen?</span>
+              <span class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-navy transition-transform duration-300 faq-icon group-hover:bg-cyan/15 group-hover:text-cyan">
+                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+              </span>
+            </button>
+            <div class="faq-answer grid transition-all">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-6 text-base leading-relaxed text-slate-500 border-t border-slate-100 pt-4">
+                  Mantención preventiva y correctiva, reparación, normalización, importación e instalación de equipos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 3 -->
+          <div class="faq-item group border border-slate-200 bg-white rounded-xl transition-all duration-300">
+            <button class="faq-toggle flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-display font-bold text-navy hover:text-cyan transition-colors" aria-expanded="false">
+              <span>¿Cómo puedo solicitar una cotización?</span>
+              <span class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-navy transition-transform duration-300 faq-icon group-hover:bg-cyan/15 group-hover:text-cyan">
+                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+              </span>
+            </button>
+            <div class="faq-answer grid transition-all">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-6 text-base leading-relaxed text-slate-500 border-t border-slate-100 pt-4">
+                  Puedes completar el formulario de contacto o llamar directamente al equipo de ventas para coordinar la evaluación.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="faq-item group border border-slate-200 bg-white rounded-xl transition-all duration-300">
+            <button class="faq-toggle flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-display font-bold text-navy hover:text-cyan transition-colors" aria-expanded="false">
+              <span>¿Realizan evaluación previa?</span>
+              <span class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-navy transition-transform duration-300 faq-icon group-hover:bg-cyan/15 group-hover:text-cyan">
+                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+              </span>
+            </button>
+            <div class="faq-answer grid transition-all">
+              <div class="overflow-hidden">
+                <p class="px-6 pb-6 text-base leading-relaxed text-slate-500 border-t border-slate-100 pt-4">
+                  Sí, revisamos el requerimiento y el estado del equipo para proponer una solución técnica adecuada.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="bg-surface px-6 pb-10 lg:pb-12 lg:px-8">
+      <div class="mx-auto grid max-w-7xl gap-12 rounded-3xl bg-primary text-white p-6 md:p-12 lg:grid-cols-[.85fr_1.15fr] relative overflow-hidden shadow-premium">
+        
+        <!-- Subtle back glow -->
+        <div class="absolute -left-10 -bottom-10 w-96 h-96 bg-purple/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="self-center relative z-10">
+          <p class="inline-flex items-center gap-2 font-bold">
+            <i data-lucide="settings" class="h-5 w-5"></i> Contacto
+          </p>
+          <h2 class="mt-5 text-4xl font-extrabold md:text-5xl font-display">
+            Estamos para <span class="text-secondary">ayudarte</span>
+          </h2>
+          <p class="mt-4 text-lg leading-8 text-white/80 font-light">
+            Cuéntanos tu requerimiento y te ayudaremos a encontrar la solución más adecuada según el tipo de servicio que necesitas.
+          </p>
+          
+          <div class="mt-8 rounded-2xl bg-white p-6 text-ink shadow-lg">
+            <h3 class="flex items-center gap-4 text-xl md:text-2xl font-extrabold font-display text-primary">
+              <i data-lucide="circle-help" class="h-7 w-7 text-secondary"></i> ¿Prefieres contactarnos directo?
+            </h3>
+            <p class="mt-4 text-base text-slate-600 leading-relaxed">
+              Puedes comunicarte con nuestro equipo de ventas o llamar a nuestra línea de emergencias.
+            </p>
+            
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <a href="tel:+56223536728" class="rounded-xl border-2 border-ink p-4 font-semibold transition hover:bg-ink hover:text-white flex flex-col gap-2 shadow-sm text-sm">
+                <i data-lucide="headphones" class="h-8 w-8 text-secondary"></i>
+                Ventas<br>
+                <span class="mt-1 block text-sm sm:text-base font-bold whitespace-nowrap tracking-tight">+56 2 2353 6728</span>
+              </a>
+              <a href="tel:+56931831327" class="rounded-xl bg-primary p-4 font-semibold text-white transition hover:-translate-y-0.5 flex flex-col gap-2 shadow-md">
+                <i data-lucide="alert-triangle" class="h-8 w-8 text-red-400 animate-pulse"></i>
+                Emergencias<br>
+                <span class="mt-1 block text-sm sm:text-base font-bold whitespace-nowrap tracking-tight">+56 9 3183 1327</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form Box -->
+        <div class="relative z-10">
+          <form id="contactForm" class="rounded-2xl bg-white p-6 text-ink md:p-8 shadow-xl border border-slate-100">
+            <h2 class="text-3xl font-extrabold font-display">¡Envíanos un mensaje!</h2>
+            
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div>
+                <label for="formNombre" class="block font-medium text-slate-700">Nombre completo *</label>
+                <input required id="formNombre" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10" placeholder="Ej: Juan Pérez" />
+              </div>
+              <div>
+                <label for="formEmail" class="block font-medium text-slate-700">Correo *</label>
+                <input required type="email" id="formEmail" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10" placeholder="juan@ejemplo.com" />
+              </div>
+            </div>
+            
+            <div class="mt-4">
+              <label for="formAsunto" class="block font-medium text-slate-700">Asunto *</label>
+              <select required id="formAsunto" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-500 bg-white outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10">
+                <option value="">Selecciona una opción</option>
+                <option>Mantención preventiva</option>
+                <option>Reparación o normalización</option>
+                <option>Instalación</option>
+                <option>Emergencia</option>
+              </select>
+            </div>
+            
+            <div class="mt-4">
+              <label for="formMensaje" class="block font-medium text-slate-700">Mensaje *</label>
+              <textarea required rows="4" id="formMensaje" class="mt-2 w-full resize-none rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition duration-200 focus:border-cyan focus:ring-4 focus:ring-cyan/10" placeholder="¿En qué podemos ayudarte?"></textarea>
+            </div>
+            
+            <button class="mt-5 inline-flex items-center gap-2 rounded-xl bg-purple px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-purple-dark shadow-md" type="submit">
+              Enviar mensaje <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+            </button>
+            
+            <!-- Success notification toast -->
+            <div id="formSuccessMsg" class="mt-4 hidden bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl p-4 flex items-start gap-3 transition-all duration-300">
+              <i data-lucide="check-circle" class="h-5.5 w-5.5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="block text-sm font-bold">¡Mensaje registrado con éxito!</strong>
+                <span class="block text-xs mt-1 text-emerald-700/90">Tu solicitud ha sido ingresada en nuestra cola de atención. Un ejecutivo técnico te contactará a la brevedad.</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary text-white py-6 border-t border-white/5 relative overflow-hidden">
+    <!-- Subtle element -->
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <a href="#inicio" class="inline-block">
+            <img src="logo-blanco%201.png" alt="MYT Ascensores" class="h-16 w-auto md:h-20 object-contain" />
+          </a>
+          <p class="mt-2 max-w-xl text-slate-400 leading-relaxed font-light text-xs">
+            Empresa especializada en mantención, reparación e instalación de ascensores.
+          </p>
+        </div>
+        <nav class="flex flex-wrap gap-6 md:gap-9 text-slate-400 font-semibold text-xs md:text-sm">
+          <a class="hover:text-secondary transition-colors" href="#inicio">Inicio</a>
+          <a class="hover:text-secondary transition-colors" href="nosotros.html">Nosotros</a>
+          <a class="hover:text-secondary transition-colors" href="#servicios">Servicios</a>
+          <a class="hover:text-secondary transition-colors" href="#proceso">Proceso</a>
+          <a class="hover:text-secondary transition-colors" href="#preguntas">Preguntas Frecuentes</a>
+          <a class="hover:text-secondary transition-colors" href="#contacto">Contacto</a>
+        </nav>
+      </div>
+      
+      <div class="mt-4 flex flex-col gap-4 text-[11px] text-slate-500 md:flex-row md:items-center md:justify-between">
+        <p>© 2026 MYT Ascensores. Todos los derechos reservados.</p>
+        <div class="flex gap-4">
+          <a aria-label="Facebook" class="text-slate-500 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="index.html"><i class="fa-brands fa-facebook text-lg"></i></a>
+          <a aria-label="Instagram" class="text-slate-500 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.instagram.com/mytascensores/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a aria-label="YouTube" class="text-slate-500 hover:text-secondary transition-colors p-1 flex items-center justify-center h-7 w-7" href="https://www.youtube.com/@mytascensores-zl2pt" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube text-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MINIMALIST FLOATING EMERGENCY ACTION -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <a href="https://wa.me/56931831327" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="group relative flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:bg-[#20ba5a] transition-all hover:scale-105 duration-300">
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+      <span class="absolute right-16 scale-0 group-hover:scale-100 bg-primary text-white text-[11px] font-bold py-2 px-4 rounded-xl shadow-lg border border-slate-800 transition-all duration-200 whitespace-nowrap">
+        WhatsApp 24/7
+      </span>
+    </a>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-primary/95 backdrop-blur-md opacity-0 transition-opacity duration-300">
+    <!-- Close button top-right -->
+    <button onclick="closeLightbox()" aria-label="Cerrar galería" class="absolute top-6 right-6 text-white/80 hover:text-white transition-all duration-200 z-50 flex items-center justify-center p-2.5 rounded-full bg-white/10 hover:bg-white/20 hover:scale-105">
+      <i data-lucide="x" class="h-6 w-6"></i>
+    </button>
+    
+    <!-- Next/Prev arrows inside Lightbox -->
+    <button onclick="prevLightboxImage()" aria-label="Imagen anterior" class="absolute left-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-all duration-200 z-50 flex items-center justify-center p-3 rounded-full bg-white/10 hover:bg-white/20 hover:scale-105">
+      <i data-lucide="chevron-left" class="h-8 w-8"></i>
+    </button>
+    <button onclick="nextLightboxImage()" aria-label="Imagen siguiente" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-all duration-200 z-50 flex items-center justify-center p-3 rounded-full bg-white/10 hover:bg-white/20 hover:scale-105">
+      <i data-lucide="chevron-right" class="h-8 w-8"></i>
+    </button>
+
+    <!-- Content container -->
+    <div class="relative max-w-5xl max-h-[85vh] px-4 flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Ampliado" class="max-w-full max-h-[72vh] rounded-xl object-contain shadow-2xl scale-95 transition-transform duration-300 border border-white/10" />
+      <p id="lightbox-caption" class="mt-5 text-white/95 text-center font-display font-semibold text-lg tracking-wide bg-navy-dark/60 px-6 py-2.5 rounded-full backdrop-blur-sm border border-white/5"></p>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT BEHAVIORS -->
+  <script>
+    // 5. SERVICES TAB SWITCHER BEHAVIOR
+    const servicesData = {
+      mantenimiento: {
+        category: 'Servicio Preventivo',
+        title: 'Mantenimiento Multimarca',
+        icon: 'clipboard-check',
+        description: 'Son aquellas intervenciones que requieren alto conocimiento técnico, respetando los procedimientos y protocolos del fabricante, según marca y modelo, realizadas mensualmente según la normativa vigente.',
+        features: [
+          'Mantención preventiva mensual',
+          'Servicio multimarca experto',
+          'Atención profesional de alta calidad'
+        ],
+        metrics: [
+          { num: '+250', lbl: 'Equipos' },
+          { num: '+120', lbl: 'Servicios' },
+          { num: '100%', lbl: 'Garantía' }
+        ]
+      },
+      reparacion: {
+        category: 'Servicio Correctivo',
+        title: 'Reparación y Normalización',
+        icon: 'cog',
+        description: 'Diagnosticamos fallas, corregimos desviaciones técnicas y normalizamos equipos para recuperar seguridad, continuidad operacional y cumplimiento normativo exigido por el MINVU.',
+        features: [
+          'Diagnóstico de fallas avanzado',
+          'Corrección técnica inmediata',
+          'Normalización y certificación legal'
+        ],
+        metrics: [
+          { num: '+300', lbl: 'Reparaciones' },
+          { num: 'MINVU', lbl: 'Norma' },
+          { num: '100%', lbl: 'Seguro' }
+        ]
+      },
+      importacion: {
+        category: 'Proyectos Especiales',
+        title: 'Importación e Instalación',
+        icon: 'download',
+        description: 'Acompañamos proyectos de importación, instalación y puesta en marcha de equipos de transporte vertical, coordinando cada etapa técnica con foco en trazabilidad y excelencia operacional.',
+        features: [
+          'Importación directa multimarca',
+          'Montaje completo e ingeniería',
+          'Puesta en marcha con trazabilidad'
+        ],
+        metrics: [
+          { num: 'Global', lbl: 'Origen' },
+          { num: '+50', lbl: 'Instalaciones' },
+          { num: 'ISO', lbl: 'Calidad' }
+        ]
+      },
+      correctivo: {
+        category: 'Servicio Correctivo 24/7',
+        title: 'Mantenimiento Correctivo',
+        icon: 'clipboard-list',
+        description: 'Atendemos requerimientos puntuales y llamadas de emergencias técnicas las 24 horas del día para resolver interrupciones, ajustar componentes y mantener los equipos disponibles.',
+        features: [
+          'Atención técnica 24/7/365',
+          'Rescate y ajustes express',
+          'Disponibilidad operacional garantizada'
+        ],
+        metrics: [
+          { num: '24h', lbl: 'Rescate' },
+          { num: 'Rápido', lbl: 'Arribo' },
+          { num: 'Experto', lbl: 'Soporte' }
+        ]
+      }
+    };
+
+    function setActiveService(serviceKey) {
+      const data = servicesData[serviceKey];
+      if (!data) return;
+
+      // 1. Update Card Details
+      document.getElementById('detail-category').innerText = data.category;
+      document.getElementById('detail-title').innerText = data.title;
+      document.getElementById('detail-description').innerText = data.description;
+
+      // Update Icon
+      const iconEl = document.getElementById('detail-icon');
+      iconEl.setAttribute('data-lucide', data.icon);
+
+      // Rebuild features list
+      const featuresContainer = document.getElementById('detail-features');
+      featuresContainer.innerHTML = '';
+      data.features.forEach(feat => {
+        const li = document.createElement('li');
+        li.className = 'flex items-center gap-3 text-sm text-slate-700 font-medium';
+        li.innerHTML = `
+          <span class="flex-shrink-0 rounded-full bg-secondary/10 p-1 text-secondary-dark"><i data-lucide="check" class="h-3.5 w-3.5"></i></span>
+          <span>${feat}</span>
+        `;
+        featuresContainer.appendChild(li);
+      });
+
+      // Update Stats
+      document.getElementById('detail-stat1-num').innerText = data.metrics[0].num;
+      document.getElementById('detail-stat1-lbl').innerText = data.metrics[0].lbl;
+      document.getElementById('detail-stat2-num').innerText = data.metrics[1].num;
+      document.getElementById('detail-stat2-lbl').innerText = data.metrics[1].lbl;
+      document.getElementById('detail-stat3-num').innerText = data.metrics[2].num;
+      document.getElementById('detail-stat3-lbl').innerText = data.metrics[2].lbl;
+
+      // Update CTA Button Link
+      document.getElementById('detail-cta').href = `servicio.html?id=${serviceKey}`;
+
+      // 2. Toggle Tab Classes
+      Object.keys(servicesData).forEach(key => {
+        const tabEl = document.getElementById('tab-' + key);
+        const iconWrapper = tabEl.querySelector('.service-tab-icon');
+        if (key === serviceKey) {
+          // Active state
+          tabEl.className = 'service-tab text-left p-3 rounded-xl border border-secondary bg-white shadow-[0_0_15px_rgba(43,199,217,0.2)] opacity-100 transition-all duration-300 group flex flex-col justify-between min-h-[85px] relative overflow-hidden';
+          iconWrapper.className = 'service-tab-icon rounded-lg bg-secondary text-white p-1.5 shadow-md border border-secondary/10 transition-all duration-300 group-hover:scale-110 flex items-center justify-center';
+        } else {
+          // Inactive state
+          tabEl.className = 'service-tab text-left p-3 rounded-xl border border-slate-100 bg-white opacity-85 hover:opacity-100 hover:border-secondary/30 transition-all duration-300 group flex flex-col justify-between min-h-[85px] relative overflow-hidden shadow-sm';
+          iconWrapper.className = 'service-tab-icon rounded-lg bg-secondary/10 text-secondary p-1.5 shadow-sm border border-secondary/10 transition-all duration-300 group-hover:scale-110 flex items-center justify-center';
+        }
+      });
+
+      // Re-trigger Lucide icon generation for the newly inserted elements
+      lucide.createIcons();
+    }
+
+    // Set default on load
+    document.addEventListener('DOMContentLoaded', () => {
+      setActiveService('mantenimiento');
+    });
+
+    // 1. MOBILE MENU DRAWER TOGGLE
+    const menuToggleBtn = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    menuToggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const isHidden = mobileMenu.classList.contains('hidden');
+      
+      if (isHidden) {
+        menuIcon.setAttribute('data-lucide', 'menu');
+        menuIcon.style.transform = 'rotate(0deg)';
+      } else {
+        menuIcon.setAttribute('data-lucide', 'x');
+        menuIcon.style.transform = 'rotate(90deg)';
+      }
+      lucide.createIcons();
+    });
+
+    // Close mobile drawer when link is clicked
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.setAttribute('data-lucide', 'menu');
+        menuIcon.style.transform = 'rotate(0deg)';
+        lucide.createIcons();
+      });
+    });
+
+
+    // 2. FAQ ACCORDION FUNCTIONALITY
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.closest('.faq-item');
+        const isOpen = item.classList.contains('is-open');
+        
+        // Close all other accordion items first for a single-open focus accordion behavior
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('is-open');
+            otherItem.querySelector('.faq-toggle').setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle state of current item
+        if (isOpen) {
+          item.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('is-open');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+
+    // 3. STICKY NAV BACKGROUND & LOGO SHIFT ON SCROLL
+    const headerEl = document.getElementById('mainHeader');
+    const logoEl = document.getElementById('headerLogo');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        headerEl.classList.add('glass-nav-scrolled');
+        headerEl.classList.remove('glass-nav');
+        logoEl.classList.remove('h-20', 'md:h-28', 'lg:h-32');
+        logoEl.classList.add('h-14', 'md:h-20', 'lg:h-24');
+      } else {
+        headerEl.classList.add('glass-nav');
+        headerEl.classList.remove('glass-nav-scrolled');
+        logoEl.classList.remove('h-14', 'md:h-20', 'lg:h-24');
+        logoEl.classList.add('h-20', 'md:h-28', 'lg:h-32');
+      }
+    });
+
+
+    // 4. CONTACT FORM SUBMIT SUCCESS STATE
+    const contactForm = document.getElementById('contactForm');
+    const formSuccessMsg = document.getElementById('formSuccessMsg');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Visual feedback trigger
+      formSuccessMsg.classList.remove('hidden');
+      formSuccessMsg.classList.add('block');
+      
+      // Reset inputs after 1 second of delay
+      setTimeout(() => {
+        contactForm.reset();
+      }, 500);
+
+      // Hide success message automatically after 6 seconds
+      setTimeout(() => {
+        formSuccessMsg.classList.add('hidden');
+        formSuccessMsg.classList.remove('block');
+      }, 6000);
+    });
+
+    // 5. TIMED RESPONSIVE GALLERY SLIDER
+    let currentSlideIndex = 0;
+    const totalSlides = 8;
+    
+    function getVisibleSlidesCount() {
+      if (window.innerWidth >= 768) return 4; // md breakpoint
+      if (window.innerWidth >= 640) return 2;  // sm breakpoint
+      return 1;
+    }
+
+    function updateSliderPosition() {
+      const sliderTrack = document.getElementById('gallery-slider');
+      if (!sliderTrack) return;
+      const visibleSlides = getVisibleSlidesCount();
+      const maxIndex = totalSlides - visibleSlides;
+      
+      if (currentSlideIndex > maxIndex) {
+        currentSlideIndex = 0;
+      }
+      if (currentSlideIndex < 0) {
+        currentSlideIndex = maxIndex;
+      }
+      
+      const translatePercentage = currentSlideIndex * (100 / visibleSlides);
+      sliderTrack.style.transform = `translateX(-${translatePercentage}%)`;
+      
+      updateDots(maxIndex);
+    }
+    
+    function nextSlide() {
+      currentSlideIndex++;
+      updateSliderPosition();
+    }
+    
+    function prevSlide() {
+      currentSlideIndex--;
+      updateSliderPosition();
+    }
+    
+    // Auto-advance slider every 4.5 seconds
+    let sliderInterval = setInterval(nextSlide, 4500);
+    
+    // Pause auto-play on mouse enter and resume on leave
+    document.addEventListener('DOMContentLoaded', () => {
+      const sliderContainer = document.getElementById('gallery-slider')?.parentElement?.parentElement;
+      if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', () => clearInterval(sliderInterval));
+        sliderContainer.addEventListener('mouseleave', () => {
+          clearInterval(sliderInterval);
+          sliderInterval = setInterval(nextSlide, 4500);
+        });
+      }
+      generateDots();
+      updateSliderPosition();
+    });
+
+    function generateDots() {
+      const dotsContainer = document.getElementById('slider-dots');
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      
+      const visibleSlides = getVisibleSlidesCount();
+      const maxIndex = totalSlides - visibleSlides;
+      
+      for (let i = 0; i <= maxIndex; i++) {
+        const dot = document.createElement('button');
+        dot.setAttribute('aria-label', `Ir a diapositiva ${i+1}`);
+        dot.className = `h-2 rounded-full transition-all duration-300 ${i === currentSlideIndex ? 'w-6 bg-cyan' : 'w-2 bg-slate-300 hover:bg-slate-400'}`;
+        dot.onclick = () => {
+          currentSlideIndex = i;
+          updateSliderPosition();
+        };
+        dotsContainer.appendChild(dot);
+      }
+    }
+    
+    function updateDots(maxIndex) {
+      const dotsContainer = document.getElementById('slider-dots');
+      if (!dotsContainer) return;
+      const dots = dotsContainer.children;
+      for (let i = 0; i < dots.length; i++) {
+        if (i <= maxIndex) {
+          dots[i].style.display = 'inline-block';
+          if (i === currentSlideIndex) {
+            dots[i].className = 'h-2 w-6 rounded-full bg-cyan transition-all duration-300';
+          } else {
+            dots[i].className = 'h-2 w-2 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300';
+          }
+        } else {
+          dots[i].style.display = 'none';
+        }
+      }
+    }
+    
+    window.addEventListener('resize', () => {
+      generateDots();
+      updateSliderPosition();
+    });
+
+    // 6. GALLERY LIGHTBOX SYSTEM
+    let currentLightboxIndex = 0;
+    const galleryImages = [
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM.jpeg', title: 'Inspección Técnica de Cabina y Sistemas' },
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(1).jpeg', title: 'Mantenimiento Preventivo de Poleas y Tracción' },
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(2).jpeg', title: 'Modernización de Equipos y Tableros de Control' },
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(3).jpeg', title: 'Servicio Técnico Especializado Multimarca' },
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.40%20PM%20(4).jpeg', title: 'Instalación y Ajuste de Sistemas de Seguridad' },
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.41%20PM.jpeg', title: 'Inspección de Motores y Limitadores de Velocidad' },
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.41%20PM%20(1).jpeg', title: 'Calibración de Sensores e Indicadores Digitales' },
+      { src: 'myt-design/base_images/others/WhatsApp%20Image%202026-05-11%20at%206.54.41%20PM%20(2).jpeg', title: 'Control de Calidad y Entrega de Proyectos' }
+    ];
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      const data = galleryImages[index];
+      
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const caption = document.getElementById('lightbox-caption');
+      if (!modal || !img || !caption) return;
+      
+      img.src = data.src;
+      img.alt = data.title;
+      caption.innerText = data.title;
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        img.classList.remove('scale-95');
+        img.classList.add('scale-100');
+      }, 50);
+
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      if (!modal || !img) return;
+      
+      modal.classList.add('opacity-0');
+      img.classList.remove('scale-100');
+      img.classList.add('scale-95');
+      
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    function nextLightboxImage() {
+      currentLightboxIndex = (currentLightboxIndex + 1) % galleryImages.length;
+      updateLightboxContent();
+    }
+
+    function prevLightboxImage() {
+      currentLightboxIndex = (currentLightboxIndex - 1 + galleryImages.length) % galleryImages.length;
+      updateLightboxContent();
+    }
+
+    function updateLightboxContent() {
+      const data = galleryImages[currentLightboxIndex];
+      const img = document.getElementById('lightbox-img');
+      const caption = document.getElementById('lightbox-caption');
+      if (!img || !caption) return;
+      
+      img.classList.add('opacity-0');
+      setTimeout(() => {
+        img.src = data.src;
+        img.alt = data.title;
+        caption.innerText = data.title;
+        img.classList.remove('opacity-0');
+      }, 150);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightbox-modal');
+      if (!modal || modal.classList.contains('hidden')) return;
+      
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextLightboxImage();
+      if (e.key === 'ArrowLeft') prevLightboxImage();
+    });
+
+    // Initialize all Lucide Icons on load
+    lucide.createIcons();
+  </script>
+</body>
+</html>
